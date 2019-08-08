@@ -257,7 +257,22 @@ var noevens = [1,3,5,7,9];
 someEven(noevens); // No  numbers are even !!! 1,3,5,7,9
 
 
+//reduce add array by return a function
+function add(runningTotal, currentValue) {
+    return runningTotal + currentValue;
+}
 
+var testArray = [];
+for (let i = 0; i < 10; ++i) {
+    testArray[i] = i + 1;
+}
+
+var sums = testArray.reduce(add);//
+console.log(sums); // 55
+//
+var stringArray = ["Harry ", "Gwendolyn ", "loves ", "Magic "];
+console.log(stringArray.reduce(add)); // Harry Gwendolyn loves Magic
+console.log(stringArray.reduceRight(add)); // Magic loves Gwendolyn Harry
 
 
 
